@@ -5,11 +5,13 @@ const app = express();
 
 // Imports
 const usersController = require("./controllers/usersController");
+const categoriesController = require("./controllers/categoriesController");
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.use("/users", usersController);
+app.use("/categories", categoriesController);
 
 // Routes/Base Url
 app.get("/", (req, res) => {

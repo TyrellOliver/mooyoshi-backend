@@ -22,9 +22,9 @@ CREATE TABLE locations (
     location_id SERIAL PRIMARY KEY,
     location_name TEXT NOT NULL,
     location_description TEXT,
-    location_address TEXT,
-    location_latitude DECIMAL(12, 10),
-    location_longitude DECIMAL(12, 10),
+    location_address TEXT NOT NULL,
+    location_latitude DECIMAL(12, 10) DEFAULT NULL,
+    location_longitude DECIMAL(12, 10) DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
